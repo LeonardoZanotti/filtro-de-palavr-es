@@ -1,14 +1,12 @@
 <?php
 
-// Esse filtro de palavrão foi baseado no filtro do link abaixo
-// https://github.com/Zeindelf/badwords
+// Controller base onde estão as funções para filtrar o texto
 
 namespace App\Http\Controllers\API;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\API\BaseController as BaseController;
 
-class BadwordsController extends BaseController 
+class BadwordsController
 {
     public static function badwordsList() {
         $badwords = [

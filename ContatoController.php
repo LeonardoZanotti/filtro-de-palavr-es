@@ -3,12 +3,14 @@
 namespace App\Http\Controllers\API;
 
 use Illuminate\Http\Request;
-use Validator;
+use Validator;          // Validar resposta da requisição
+use App\Contato;        // Model
 
-use App\Http\Controllers\API\BadwordsController;
+use App\Http\Controllers\API\BadwordsController;    // Controller com as funções de filtrar palavrões
 
 class ContatoController
 {
+    // Exemplo de função para criar um contato
     public function store(Request $request)
     {
         // Exemplo de requisição de formulário
@@ -21,6 +23,7 @@ class ContatoController
             'telefone' => 'max:255'
         ]);
 
+        // Verificando se a resposta da requisição está no formato correto
         if ($validator->fails()) {
             return $this::enviarRespostaErro('Campo incorreto', $validator->errors());
         };
@@ -28,7 +31,9 @@ class ContatoController
         // Filtro de palavrão
         $request->empresa = BadwordsController::verify($request->empresa);
         $request->mensagem = BadwordsController::verify($request->mensagem);
+        // $textoFiltrado = NomeDoController::verify($textoComPalavrões);
 
+        // Criando o contato com os dados da requisição e textos já filtrados
         $contato = Contato::create([
             'assunto' => $request->assunto,
             'nome' => $request->nome,
@@ -38,6 +43,7 @@ class ContatoController
             'mensagem' => $request->mensagem
         ]);
 
+        // Resposta para o usuário que criou o contato
         return "Mensagem enviada com sucesso!";
     }
 }
