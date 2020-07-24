@@ -1,4 +1,4 @@
-# filtro-de-palavroes
+# Filtro de palavrões
 Filtro de palavrões feito em php/laravel
 
 Esse filtro de palavrões foi baseado no filtro: https://github.com/Zeindelf/badwords
