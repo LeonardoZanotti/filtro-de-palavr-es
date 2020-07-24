@@ -1,9 +1,9 @@
 # filtro-de-palavroes
 Filtro de palavrões feito em php/laravel
 
-Esse filtro de palavrão foi baseado no filtro: https://github.com/Zeindelf/badwords
+Esse filtro de palavrões foi baseado no filtro: https://github.com/Zeindelf/badwords
 
-Esse filtro analisa um banco de dados de palavras e compara com a mensagem passada, se uma palavra isolada da palavra for igual ao do banco de dados a palavra é substituída por asterísticos de modo que o comprimento da palavra se mantém. Por exemplo: roliço -> "\*\*\*\*\*\*".
+Esse filtro analisa um banco de dados de palavras e compara com a mensagem passada, se uma palavra isolada da palavra for igual ao do banco de dados a palavra é substituída por asteríscos de modo que o comprimento da palavra se mantém. Por exemplo: roliço -> "\*\*\*\*\*\*".
 
 ## O filtro funciona com:
 * Letras maiúsculas e minúsculas: ROLIÇO, roliço, RoLiÇO -> "\*\*\*\*\*\*".

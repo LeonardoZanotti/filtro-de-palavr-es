@@ -4,8 +4,6 @@
 
 namespace App\Http\Controllers\API;
 
-use Illuminate\Http\Request;
-
 class BadwordsController
 {
     public static function badwordsList() {
