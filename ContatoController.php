@@ -1,5 +1,7 @@
 <?php
 
+// Exemplo de controller de contato para usar o filtro
+
 namespace App\Http\Controllers\API;
 
 use Illuminate\Http\Request;
